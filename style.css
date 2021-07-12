@@ -3,12 +3,13 @@
   src: url(./assets/fonts/Helvetica-Neue-LT-Com-55-Roman.ttf);
 }
 
-/* ---- COLOR VARIABLES ---- */
+/* ------------------------- COLOR VARIABLES -------------------------------- */
 :root {
   --primary: #888888;
   --secondary: #ffffff;
   --bg-color: #707070;
 }
+
 
 * {
   margin: 0;
@@ -24,7 +25,12 @@ body {
   min-height: 100vh;
 }
 
-/*  ----- BACKGROUND ELEMENTS ----- */
+.page-container {
+  margin: 0 auto;
+  width: 920px;
+}
+
+/*  -------------------- BACKGROUND ELEMENTS -------------------------------- */
 .bg-header {
   position: absolute;
   z-index: -1;
@@ -47,7 +53,7 @@ body {
   clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
 }
 
-/*  ---- GENERAL STYLES ---- */
+/*  ------------------------- GENERAL STYLES -------------------------------- */
 .color-white {
   color: var(--secondary);
 }
@@ -58,6 +64,7 @@ body {
 
 .text-sm {
   font-size: 12px;
+  line-height: 18px;
 }
 
 .text-md {
@@ -68,13 +75,45 @@ body {
   font-size: 20px;
 }
 
-/*  ---- HEADER ---- */
+.btn {
+  padding-top: 6px;
+  width: 100%;
+  height: 39px;
+  background-color: white;
+  border: 1px solid var(--bg-color);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/*  ----------------------------- FORM -------------------------------------- */
+label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 7px;
+}
+
+.input-text {
+  width: 100%;
+  max-width: 340px;
+  height: 30px;
+}
+
+.error {
+  display: block;
+  font-size: 12px;
+  color: #cf3333;
+  margin-bottom: 8px;
+}
+
+
+/*  ---------------------------- HEADER ------------------------------------- */
 header {
   padding-top: 69px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 150px;
 }
 
 .header-wrapper {
@@ -100,6 +139,7 @@ nav a {
   margin: 20px;
   width: 160px;
   height: 40px;
+  padding-top: 6px;
   background-color: var(--secondary);
   border: 1px solid var(--bg-color);
   border-radius: 4px;
@@ -111,3 +151,44 @@ nav a {
 nav a:hover {
   opacity: 0.9;
 }
+
+/* -------------------------- ALGORITHM SECTION ----------------------------- */
+#algorithm-section {
+  display: flex;
+  margin-bottom: 79px;
+}
+
+article {
+  width: 60%;
+}
+
+article h2 {
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+#algorithm-form {
+  width: 40%;
+  margin-left: 40px;
+}
+
+.radio-container {
+  display: flex;
+}
+.radio-container div {
+  display: flex;
+  margin-right: 40px;
+}
+.radio-container div input{
+  margin-right: 4px;
+}
+
+
+
+/* --------------------------- PRODUCTS SECTION ----------------------------- */
+
+
+/* ---------------------------- SHARE SECTION ------------------------------- */
+
+
+/* --------------------------- FOOTER SECTION ------------------------------- */

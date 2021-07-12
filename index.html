@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <div>
+    <div class="page-container">
       <div class="bg-header"></div>
       <header>
         <div class="header-wrapper">
@@ -28,18 +28,24 @@
         </div>
 
         <nav>
-          <a class="btn" href="https://www.linx.com.br/" rel="noopener noreferrer" target="_blank">Conheça a Linx</a>
-          <a class="btn" href="#algorithm-form">Ajude o algorítimo</a>
-          <a class="btn" href="#products">Seus produtos</a>
-          <a class="btn" href="#">Compartilhe</a>
+          <a
+            href="https://www.linx.com.br/" 
+            rel="noopener noreferrer" 
+            target="_blank"
+          >
+            Conheça a Linx
+          </a>
+          <a href="#algorithm-section">Ajude o algorítimo</a>
+          <a href="#products">Seus produtos</a>
+          <a href="#share">Compartilhe</a>
         </nav>
       </header>
 
       <main>
-        <section>
+        <section id="algorithm-section">
           <article>
-            <h2>Ajude o algorítimo a ser mais certeiro</h2>
-            <p>
+            <h2 class="text-lg">Ajude o algorítimo a ser mais certeiro</h2>
+            <p class="text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Pellentesque ultricies tellus nec mi porta convallis
               sollicitudin eu urna. Mauris rhoncus erat sed interdum
@@ -61,40 +67,44 @@
             </p>
           </article>
 
-          <form action="">
-            <fieldset>
+          <form id="algorithm-form" action="">
               <div>
                 <label for="">Seu nome:</label>
-                <input type="text">
-                <span>error</span>
+                <input class="input-text" type="text">
+                <span class="error">error</span>
               </div>
   
               <div>
                 <label for="">E-mail:</label>
-                <input type="email">
-                <span>error</span>
+                <input class="input-text" type="email">
+                <span class="error">error</span>
               </div>
   
               <div>
                 <label for="">CPF:</label>
-                <input type="text">
-                <span>error</span>
+                <input class="input-text" type="text">
+                <span class="error">error</span>
               </div>    
   
               <div>
-                <input type="radio" name="gender" id="male" value="masculino">
-                <label for="male">Masculino </label>
-                <input type="radio" name="gender" id="female" value="feminino">
-                <label for="female">Feminino</label>
-                <span>error</span>
+                <div class="radio-container">
+                  <div>
+                    <input type="radio" name="gender" id="male" value="masculino">
+                    <label for="male">Masculino </label>
+                  </div>
+                  <div>
+                    <input type="radio" name="gender" id="female" value="feminino">
+                    <label for="female">Feminino</label>
+                  </div>
+                </div>
+                <span class="error">error</span>
               </div>
   
-              <button type="submit">Enviar</button>
-            </fieldset>
+              <button class="btn" type="submit">Enviar</button>
           </form>
         </section>
 
-        <section>
+        <section id="products">
           <div>
             <hr>
             <h3>Sua seleção especial</h3>
@@ -105,37 +115,33 @@
           </div>
 
           <div>
-            <button>Ainda mais produtos aqui!</button>
+            <button class="btn">Ainda mais produtos aqui!</button>
           </div>
         </section>
 
-        <section>
+        <section id="share">
           <div>
             <hr>
             <h3>Compartilhe a novidade</h3>
           </div>
 
           <form action="">
-            <fieldset>
-              <h4>
-                Quer que seus amigos também ganhem a lista personalizada deles?
-                Preencha agora!
-              </h4>
-  
-              <div>
-                <label for="">Nome do seu amigo:</label>
-                <input type="text">
-                <span>error</span>
-              </div>
-  
-              <div>
-                <label for="">E-mail:</label>
-                <input type="text">
-                <span>error</span>
-              </div>
-  
-              <button type="submit">Enviar agora</button>
-            </fieldset>
+            <h4>
+              Quer que seus amigos também ganhem a lista personalizada deles?
+              Preencha agora!
+            </h4>
+
+            <div>
+              <label for="">Nome do seu amigo:</label>
+              <input class="input-text" type="text">
+              <span class="error">error</span>
+
+              <label for="">E-mail:</label>
+              <input class="input-text" type="text">
+              <span class="error">error</span>
+            </div>
+
+            <button class="btn" type="submit">Enviar agora</button>
           </form>
         </section>
       </main>
