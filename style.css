@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url(./assets/fonts/Helvetica-Neue-LT-Com-55-Roman.ttf);
+}
+
+/* ---- COLOR VARIABLES ---- */
+:root {
+  --text-primary: #888888;
+  --text-white: #ffffff;
+  --bg-color: #707070;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: var(--text-primary);
+}
+
+body {
+  position: relative;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+/*  ----- BACKGROUND ELEMENTS ----- */
+.bg-header {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 399px;
+  background: var(--bg-color);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+}
+
+.bg-footer {
+  position: absolute;
+  z-index: -1;
+  bottom: 0px;
+  right: 0;
+  width: 100%;
+  height: 293px;
+  background: var(--bg-color);
+  clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+}
