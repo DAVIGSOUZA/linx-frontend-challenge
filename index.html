@@ -69,16 +69,16 @@
             </p>
           </article>
 
-          <form id="algorithm-form" onsubmit="submitAlgorithmForm()">
+          <form id="algorithm-form" name="algorithm-form" onsubmit="submitAlgorithmForm()">
             <div>
               <label for="name">Seu nome:</label>
-              <input class="input-text" type="text" name="name" id="name" required>
+              <input class="input-text" type="text" name="name" id="name">
               <span class="error" id="name-error"></span>
             </div>
 
             <div>
               <label for="email">E-mail:</label>
-              <input class="input-text" type="email" name="email" id="email" required>
+              <input class="input-text" type="email" name="email" id="email">
               <span class="error" id="email-error"></span>
             </div>
 
@@ -92,7 +92,6 @@
                 minlength="11"
                 maxlength="11"
                 placeholder="Digite somente os números"
-                required
               >
               <span class="error" id="cpf-error"></span>
             </div>    
@@ -100,12 +99,12 @@
             <div>
               <div class="radio-container">
                 <div>
-                  <input type="radio" name="gender" id="male" value="masculino" required>
+                  <input type="radio" name="gender" id="male" value="masculino">
                   <label for="male">Masculino </label>
                 </div>
 
                 <div>
-                  <input type="radio" name="gender" id="female" value="feminino" required>
+                  <input type="radio" name="gender" id="female" value="feminino">
                   <label for="female">Feminino</label>
                 </div>
               </div>
@@ -113,6 +112,7 @@
             </div>
 
             <button class="btn" type="submit">Enviar</button>
+            <span class="success" id="form-success"></span>
           </form>
         </section>
 
@@ -129,7 +129,7 @@
           </div>
 
           <div class="products-btn-wrapper">
-            <button class="btn" onclick="showMoreProducts()">
+            <button class="btn" onclick="showProducts()">
               Ainda mais produtos aqui!
             </button>
           </div>
@@ -146,22 +146,23 @@
             Preencha agora!
           </p>
 
-          <form id="share-form" onsubmit="submitShareForm()">
+          <form id="share-form" name="share-form" onsubmit="submitShareForm()">
             <div class="wrapper">
               <div>
-                <label for="">Nome do seu amigo:</label>
-                <input class="input-text" type="text" name="share-name" id="share-name" required>
+                <label for="share-name">Nome do seu amigo:</label>
+                <input class="input-text" type="text" name="share-name" id="share-name">
                 <span class="error" id="share-name-error"></span>
               </div>
 
               <div>
-                <label for="">E-mail:</label>
-                <input class="input-text" type="text" name="share-email" id="share-email" required>
+                <label for="share-email">E-mail:</label>
+                <input class="input-text" type="text" name="share-email" id="share-email">
                 <span class="error" id="share-email-error"></span>
               </div>
             </div>
 
             <button class="btn" type="submit">Enviar agora</button>
+            <span class="success" id="share-form-success"></span>
           </form>
         </section>
       </main>

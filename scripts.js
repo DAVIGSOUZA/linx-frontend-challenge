@@ -29,28 +29,87 @@ async function getData(page) {
   return data.json()
 }
 
-async function showMoreProducts() {
+async function showProducts() {
   let data = await getData(apiPage)
   createProductCard(data.products)
   apiPage++
 }
 
-showMoreProducts()
+showProducts()
 
 //  FORM VALIDATIONS
+const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
-const validadeField = (field) => {
-  
+const inputValue = (formName, inputName) => {
+  return document.forms[formName][inputName].value
 }
 
-const submitAlgorithmForm = (event) => {
-  event.preventDefault()
-
+const errorMessage = {
+  name: 'Preencha um nome válido.',
+  email: 'Preencha um e-mail válido.',
+  cpf: 'Preencha um CPF válido, somente os números.',
+  radio: 'Selecione uma das opções.'
 }
 
-const submitShareForm = (event) => {
-  event.preventDefault()
+const submitAlgorithmForm = () => {
+  let hasErrors = false
 
+  if (inputValue('algorithm-form', 'name') == '') {
+    document.getElementById("name-error").innerHTML = errorMessage.name
+    document.getElementById("form-success").innerHTML = ""
+    hasErrors = true
+  } else { document.getElementById("name-error").innerHTML = "" }
+
+  if (inputValue('algorithm-form', 'email') == '' 
+    || !emailRegex.test(inputValue('algorithm-form', 'email'))) {
+    document.getElementById("email-error").innerHTML = errorMessage.email
+    document.getElementById("form-success").innerHTML = ""
+    hasErrors = true
+  } else { document.getElementById("email-error").innerHTML = "" }
+
+  if (inputValue('algorithm-form', 'cpf') == '' 
+    || inputValue('algorithm-form', 'cpf').length !== 11 ) {
+    document.getElementById("cpf-error").innerHTML = errorMessage.cpf
+    document.getElementById("form-success").innerHTML = ""
+    hasErrors = true
+  } else { document.getElementById("cpf-error").innerHTML = "" }
+
+  if (inputValue('algorithm-form', 'gender') == '') {
+    document.getElementById("gender-error").innerHTML = errorMessage.radio
+    document.getElementById("form-success").innerHTML = ""
+    hasErrors = true
+  } else { document.getElementById("gender-error").innerHTML = "" }  
+
+  if (hasErrors) return 
+
+  document.getElementById("form-success").innerHTML = "Obrigado por ajudar o algorítmo!"
 }
 
+const submitShareForm = () => {
+  let hasErrors = false
 
+  if (inputValue('share-form', 'share-name') == '') {
+    document.getElementById("share-name-error").innerHTML = errorMessage.name
+    document.getElementById("share-form-success").innerHTML = ""
+    hasErrors = true
+  } else document.getElementById("share-name-error").innerHTML = ""
+
+  if (inputValue('share-form', 'share-email') == '' 
+    || !emailRegex.test(inputValue('share-form', 'share-email'))) {
+    document.getElementById("share-email-error").innerHTML = errorMessage.email
+    document.getElementById("share-form-success").innerHTML = ""
+    hasErrors = true
+  } else document.getElementById("share-email-error").innerHTML = ""
+
+  if (hasErrors) return
+
+  document.getElementById("share-form-success").innerHTML = "Lista personalizada enviada!"
+}
+
+// EVENT LISTENERS TO PREVENT DEFAULT BEHAVIOR ON SUBMIT
+document.getElementById("share-form")
+  .addEventListener("submit", function(event){event.preventDefault()}
+);
+document.getElementById("algorithm-form")
+  .addEventListener("submit", function(event){event.preventDefault()}
+);
