@@ -36,3 +36,21 @@ async function showMoreProducts() {
 }
 
 showMoreProducts()
+
+//  FORM VALIDATIONS
+
+const validadeField = (field) => {
+  
+}
+
+const submitAlgorithmForm = (event) => {
+  event.preventDefault()
+
+}
+
+const submitShareForm = (event) => {
+  event.preventDefault()
+
+}
+
+

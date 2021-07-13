@@ -17,8 +17,10 @@
       <div class="bg-header"></div>
       <header>
         <div class="header-wrapper">
-          <p class="color-white text-center text-lg">uma seleção de produtos</p>
           <h1 class="color-white text-center">
+            <span class="color-white text-center text-lg">
+              uma seleção de produtos
+            </span> <br>
             especial para você
           </h1>
           <p class="color-white text-center text-md">
@@ -67,46 +69,56 @@
             </p>
           </article>
 
-          <form id="algorithm-form" action="">
-              <div>
-                <label for="">Seu nome:</label>
-                <input class="input-text" type="text">
-                <span class="error">error</span>
-              </div>
-  
-              <div>
-                <label for="">E-mail:</label>
-                <input class="input-text" type="email">
-                <span class="error">error</span>
-              </div>
-  
-              <div>
-                <label for="">CPF:</label>
-                <input class="input-text" type="text">
-                <span class="error">error</span>
-              </div>    
-  
-              <div>
-                <div class="radio-container">
-                  <div>
-                    <input type="radio" name="gender" id="male" value="masculino">
-                    <label for="male">Masculino </label>
-                  </div>
-                  <div>
-                    <input type="radio" name="gender" id="female" value="feminino">
-                    <label for="female">Feminino</label>
-                  </div>
+          <form id="algorithm-form" onsubmit="submitAlgorithmForm()">
+            <div>
+              <label for="name">Seu nome:</label>
+              <input class="input-text" type="text" name="name" id="name" required>
+              <span class="error" id="name-error"></span>
+            </div>
+
+            <div>
+              <label for="email">E-mail:</label>
+              <input class="input-text" type="email" name="email" id="email" required>
+              <span class="error" id="email-error"></span>
+            </div>
+
+            <div>
+              <label for="cpf">CPF:</label>
+              <input 
+                class="input-text" 
+                type="text" 
+                name="cpf" 
+                id="cpf"
+                minlength="11"
+                maxlength="11"
+                placeholder="Digite somente os números"
+                required
+              >
+              <span class="error" id="cpf-error"></span>
+            </div>    
+
+            <div>
+              <div class="radio-container">
+                <div>
+                  <input type="radio" name="gender" id="male" value="masculino" required>
+                  <label for="male">Masculino </label>
                 </div>
-                <span class="error">error</span>
+
+                <div>
+                  <input type="radio" name="gender" id="female" value="feminino" required>
+                  <label for="female">Feminino</label>
+                </div>
               </div>
-  
-              <button class="btn" type="submit">Enviar</button>
+              <span class="error" id="gender-error"></span>
+            </div>
+
+            <button class="btn" type="submit">Enviar</button>
           </form>
         </section>
 
         <section id="products">
           <div class="section-divider">
-            <h3>Sua seleção especial</h3>
+            <h2>Sua seleção especial</h2>
             <hr>
           </div>
 
@@ -117,13 +129,15 @@
           </div>
 
           <div class="products-btn-wrapper">
-            <button class="btn" onclick="showMoreProducts()">Ainda mais produtos aqui!</button>
+            <button class="btn" onclick="showMoreProducts()">
+              Ainda mais produtos aqui!
+            </button>
           </div>
         </section>
 
         <section id="share">
           <div class="section-divider">
-            <h3>Compartilhe a novidade</h3>
+            <h2>Compartilhe a novidade</h2>
             <hr>
           </div>
 
@@ -132,18 +146,18 @@
             Preencha agora!
           </p>
 
-          <form id="share-form" action="">
+          <form id="share-form" onsubmit="submitShareForm()">
             <div class="wrapper">
               <div>
                 <label for="">Nome do seu amigo:</label>
-                <input class="input-text" type="text">
-                <span class="error">error</span>
+                <input class="input-text" type="text" name="share-name" id="share-name" required>
+                <span class="error" id="share-name-error"></span>
               </div>
 
               <div>
                 <label for="">E-mail:</label>
-                <input class="input-text" type="text">
-                <span class="error">error</span>
+                <input class="input-text" type="text" name="share-email" id="share-email" required>
+                <span class="error" id="share-email-error"></span>
               </div>
             </div>
 
