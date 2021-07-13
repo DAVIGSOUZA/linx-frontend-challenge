@@ -8,14 +8,22 @@
     <meta property="og:site_name" content="Linx Frontend Challenge">
     <title>Linx Frontend Challenge</title>
     <link id="favicon" href="./assets/favicon.png" rel="shortcut icon" type="image/png">
-    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./styles/page_config.css"/>
+    <link rel="stylesheet" href="./styles/variables.css"/>
+    <link rel="stylesheet" href="./styles/footer.css"/>
+    <link rel="stylesheet" href="./styles/global.css"/>
+    <link rel="stylesheet" href="./styles/header.css"/>
+    <link rel="stylesheet" href="./styles/info_section.css"/>
+    <link rel="stylesheet" href="./styles/products_section.css"/>
+    <link rel="stylesheet" href="./styles/share_section.css"/>
+
     <script src="./scripts.js" defer></script>
   </head>
 
   <body>
     <div class="page-container">
       <div class="bg-header"></div>
-      <header>
+      <header id="header">
         <div class="header-wrapper">
           <h1 class="color-white text-center">
             <span class="color-white text-center text-lg">
@@ -29,7 +37,7 @@
           </p>
         </div>
 
-        <nav>
+        <nav id="nav">
           <a
             href="https://www.linx.com.br/" 
             rel="noopener noreferrer" 
@@ -37,15 +45,15 @@
           >
             Conheça a Linx
           </a>
-          <a href="#algorithm-section">Ajude o algorítimo</a>
+          <a href="#info-section">Ajude o algorítimo</a>
           <a href="#products">Seus produtos</a>
           <a href="#share">Compartilhe</a>
         </nav>
       </header>
 
       <main>
-        <section id="algorithm-section">
-          <article>
+        <section id="info-section">
+          <article class="article">
             <h2 class="text-lg">Ajude o algorítimo a ser mais certeiro</h2>
             <p class="text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -69,21 +77,21 @@
             </p>
           </article>
 
-          <form id="algorithm-form" name="algorithm-form" onsubmit="submitAlgorithmForm()">
+          <form id="info-form" name="info-form" onsubmit="submitInfoForm()">
             <div>
-              <label for="name">Seu nome:</label>
+              <label class="form-label" for="name">Seu nome:</label>
               <input class="input-text" type="text" name="name" id="name">
               <span class="error" id="name-error"></span>
             </div>
 
             <div>
-              <label for="email">E-mail:</label>
+              <label class="form-label" for="email">E-mail:</label>
               <input class="input-text" type="email" name="email" id="email">
               <span class="error" id="email-error"></span>
             </div>
 
             <div>
-              <label for="cpf">CPF:</label>
+              <label class="form-label" for="cpf">CPF:</label>
               <input 
                 class="input-text" 
                 type="text" 
@@ -100,12 +108,12 @@
               <div class="radio-container">
                 <div>
                   <input type="radio" name="gender" id="male" value="masculino">
-                  <label for="male">Masculino </label>
+                  <label class="form-label" for="male">Masculino </label>
                 </div>
 
                 <div>
                   <input type="radio" name="gender" id="female" value="feminino">
-                  <label for="female">Feminino</label>
+                  <label class="form-label" for="female">Feminino</label>
                 </div>
               </div>
               <span class="error" id="gender-error"></span>
@@ -122,9 +130,9 @@
             <hr>
           </div>
 
-          <div id="cards-container">
+          <div id="product-cards-container">
             
-            <!-- PRODUCT CARDS INJECTION -->
+            <!-- PRODUCT PRODUCT-CARDS INJECTION -->
 
           </div>
 
@@ -135,7 +143,7 @@
           </div>
         </section>
 
-        <section id="share">
+        <section id="share-section">
           <div class="section-divider">
             <h2>Compartilhe a novidade</h2>
             <hr>
@@ -147,15 +155,15 @@
           </p>
 
           <form id="share-form" name="share-form" onsubmit="submitShareForm()">
-            <div class="wrapper">
+            <div class="share-form-wrapper">
               <div>
-                <label for="share-name">Nome do seu amigo:</label>
+                <label class="form-label" for="share-name">Nome do seu amigo:</label>
                 <input class="input-text" type="text" name="share-name" id="share-name">
                 <span class="error" id="share-name-error"></span>
               </div>
 
               <div>
-                <label for="share-email">E-mail:</label>
+                <label class="form-label" for="share-email">E-mail:</label>
                 <input class="input-text" type="text" name="share-email" id="share-email">
                 <span class="error" id="share-email-error"></span>
               </div>
@@ -167,7 +175,7 @@
         </section>
       </main>
 
-      <footer>
+      <footer id="footer">
         <div>
           <p class="color-white text-center text-sm">
             Testando suas habilidades em HTML, CSS e JS.

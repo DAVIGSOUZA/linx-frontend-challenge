@@ -1,14 +1,14 @@
 const createProductCard = (products) => {
   const productCard = products.map(product => `
-    <div class="card">
-      <div class="img-wrapper">
+    <div class="product-card">
+      <div class="product-img-wrapper">
         <img src="${product.image}" alt="${product.name}"/>
       </div>
-      <div class="info-wrapper">
+      <div class="product-info-wrapper">
         <p class="text-md">${product.name}</p>
         <p class="text-sm">${product.description}</p>
         <p class="text-sm">De: R$${product.oldPrice.toFixed(2).replace('.', ',')}</p>
-        <p class="price">Por: R$:${product.price.toFixed(2).replace('.', ',')}</p>
+        <p class="product-price">Por: R$:${product.price.toFixed(2).replace('.', ',')}</p>
         <p class="text-sm">
           ou ${product.installments.count}x de 
           R$${product.installments.value.toFixed(2).replace('.', ',')}
@@ -17,7 +17,7 @@ const createProductCard = (products) => {
       </div>
     </div>
   `).join("")
-  document.getElementById('cards-container').innerHTML += productCard
+  document.getElementById('product-cards-container').innerHTML += productCard
 }
 
 let apiPage = 1
@@ -51,30 +51,30 @@ const errorMessage = {
   radio: 'Selecione uma das opções.'
 }
 
-const submitAlgorithmForm = () => {
+const submitInfoForm = () => {
   let hasErrors = false
 
-  if (inputValue('algorithm-form', 'name') == '') {
+  if (inputValue('info-form', 'name') == '') {
     document.getElementById("name-error").innerHTML = errorMessage.name
     document.getElementById("form-success").innerHTML = ""
     hasErrors = true
   } else { document.getElementById("name-error").innerHTML = "" }
 
-  if (inputValue('algorithm-form', 'email') == '' 
-    || !emailRegex.test(inputValue('algorithm-form', 'email'))) {
+  if (inputValue('info-form', 'email') == '' 
+    || !emailRegex.test(inputValue('info-form', 'email'))) {
     document.getElementById("email-error").innerHTML = errorMessage.email
     document.getElementById("form-success").innerHTML = ""
     hasErrors = true
   } else { document.getElementById("email-error").innerHTML = "" }
 
-  if (inputValue('algorithm-form', 'cpf') == '' 
-    || inputValue('algorithm-form', 'cpf').length !== 11 ) {
+  if (inputValue('info-form', 'cpf') == '' 
+    || inputValue('info-form', 'cpf').length !== 11 ) {
     document.getElementById("cpf-error").innerHTML = errorMessage.cpf
     document.getElementById("form-success").innerHTML = ""
     hasErrors = true
   } else { document.getElementById("cpf-error").innerHTML = "" }
 
-  if (inputValue('algorithm-form', 'gender') == '') {
+  if (inputValue('info-form', 'gender') == '') {
     document.getElementById("gender-error").innerHTML = errorMessage.radio
     document.getElementById("form-success").innerHTML = ""
     hasErrors = true
@@ -110,6 +110,6 @@ const submitShareForm = () => {
 document.getElementById("share-form")
   .addEventListener("submit", function(event){event.preventDefault()}
 );
-document.getElementById("algorithm-form")
+document.getElementById("info-form")
   .addEventListener("submit", function(event){event.preventDefault()}
 );

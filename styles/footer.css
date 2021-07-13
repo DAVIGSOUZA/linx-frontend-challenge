@@ -1,0 +1,12 @@
+#footer {
+  padding-top: 160px;
+  padding-bottom: 86px;
+}
+
+/* --------------------------- MEDIA QUERIES -------------------------------- */
+@media (max-width: 480px) {
+  #footer {
+    padding-top: 70px;
+    padding-bottom: 36px;
+  }
+}
