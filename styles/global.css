@@ -65,6 +65,10 @@
   margin-bottom: 7px;
 }
 
+.input-container {
+
+}
+
 .input-text {
   width: 340px;
   height: 30px;
@@ -85,6 +89,7 @@
   color: var(--success);
   margin-bottom: 8px;
 }
+
 
 /* --------------------------- FONT CONFIG ---------------------------------- */
 @font-face {

@@ -7,6 +7,7 @@
     <meta property="og:title">
     <meta property="og:site_name" content="Linx Frontend Challenge">
     <title>Linx Frontend Challenge</title>
+
     <link id="favicon" href="./assets/favicon.png" rel="shortcut icon" type="image/png">
     <link rel="stylesheet" href="./styles/page_config.css"/>
     <link rel="stylesheet" href="./styles/variables.css"/>
@@ -22,7 +23,7 @@
 
   <body>
     <div class="page-container">
-      <div class="bg-header"></div>
+      <span class="bg-header"></span>
       <header id="header">
         <div class="header-wrapper">
           <h1 class="color-white text-center">
@@ -65,8 +66,8 @@
               vel egestas. Class aptent taciti sociosqu ad litora torquent per
               conubia nostra, per inceptos himenaeos. Vestibulum vel urna
               tortor. Vivamus et arcu non felis tristique eleifend.
-              <br>
-              <br>
+            </p>
+            <p class="text-sm">
               Morbi eu condimentum urna. Curabitur eu magna eget turpis
               condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar
               purus sed, egestas erat. Etiam ultricies a ante vehicula
@@ -78,19 +79,19 @@
           </article>
 
           <form id="info-form" name="info-form" onsubmit="submitInfoForm()">
-            <div>
+            <div class="input-container">
               <label class="form-label" for="name">Seu nome:</label>
               <input class="input-text" type="text" name="name" id="name">
               <span class="error" id="name-error"></span>
             </div>
 
-            <div>
+            <div class="input-container">
               <label class="form-label" for="email">E-mail:</label>
               <input class="input-text" type="email" name="email" id="email">
               <span class="error" id="email-error"></span>
             </div>
 
-            <div>
+            <div class="input-container">
               <label class="form-label" for="cpf">CPF:</label>
               <input 
                 class="input-text" 
@@ -104,7 +105,7 @@
               <span class="error" id="cpf-error"></span>
             </div>    
 
-            <div>
+            <div class="input-container">
               <div class="radio-container">
                 <div>
                   <input type="radio" name="gender" id="male" value="masculino">
@@ -131,9 +132,7 @@
           </div>
 
           <div id="product-cards-container">
-            
-            <!-- PRODUCT PRODUCT-CARDS INJECTION -->
-
+            <!-- PRODUCT-CARDS INJECTION -->
           </div>
 
           <div class="products-btn-wrapper">
@@ -156,13 +155,13 @@
 
           <form id="share-form" name="share-form" onsubmit="submitShareForm()">
             <div class="share-form-wrapper">
-              <div>
+              <div class="input-container">
                 <label class="form-label" for="share-name">Nome do seu amigo:</label>
                 <input class="input-text" type="text" name="share-name" id="share-name">
                 <span class="error" id="share-name-error"></span>
               </div>
 
-              <div>
+              <div class="input-container">
                 <label class="form-label" for="share-email">E-mail:</label>
                 <input class="input-text" type="text" name="share-email" id="share-email">
                 <span class="error" id="share-email-error"></span>
@@ -184,7 +183,7 @@
           <p class="color-white text-center text-sm">2019</p>
         </div>
       </footer>
-      <div class="bg-footer"></div>
+      <span class="bg-footer"></span>
     </div>
   </body>
 </html>
