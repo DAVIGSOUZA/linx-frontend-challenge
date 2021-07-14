@@ -62,7 +62,7 @@
     margin-left: 10px;
     height: 130px;
   }
-  .product-info-wrapper p:nth-child(2){
+  .product-info-wrapper span:nth-child(2){
     display: none;
   }
   .product-img-wrapper {
