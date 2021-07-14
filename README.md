@@ -9,42 +9,44 @@ https://linx-frontend-challenge.vercel.app/#products
 - Este projeto não possui dependências.
 
 ### Para rodar o projeto localmente
-1. Clonar o repósitório
-2. rodar aplicação em um servidor web (ex: extensão do VScode live server)*
-3. para acessar a página de email, na barra de endereço no final da url substituir `index.html` por `email.html`
+1. Clonar o repositório
+2. Rodar aplicação em um servidor web (ex: extensão do VScode live server)*
+3. Para acessar a página de email, na barra de endereço no final da url substituir `index.html` por `email.html`
 
 *Acessar diretamente o arquivo pelo gerenciador pode gerar comportamentos inesperados.
 
 
 ## Checklist
 ### Requisitos
-✅ implementar o layout de acordo com layout.
+✅ Implementação de acordo com o layout.
 
 ✅ HTML mais semântico possível utilizando-se das tags do HTML5.
 
 ✅ Layout responsivo
 
-✅ Preencher a página com as informações dos produtos, você terá que consultar esta API de forma paginada
+✅ Preencher a página com as informações dos produtos, consultando a API de forma paginada
 
-✅ Para cada produto retornado pela API, um card de produto com as respectivas informações é criado na grade de produtos;
+✅ Para cada produto retornado pela API, um card de produto com as respectivas informações é criado na grade de produtos
 
-✅ Ao clicar no botão Ainda mais produtos aqui! a próxima página da API é consultada, gerando mais 8 produtos na grade existente, abaixo dos produtos já carregados pela primeira requisição
+✅ Ao clicar no botão "Ainda mais produtos aqui!" a próxima página da API é consultada, gerando mais 8 produtos na grade existente, abaixo dos produtos já carregados pela primeira requisição
 
-✅ Formulário de newsletter com o título Compartilhe a novidade com campos de input validados de acordo com o conteúdo
+✅ Formulário de newsletter com o título "Compartilhe a novidade" com campos de input validados de acordo com o conteúdo
 
-✅ Commits ao longo do seu desenvolvimento
+✅ Commits ao longo do desenvolvimento
 
-✅ README.md que contenha as informações de setup e a descrição do seu projeto
+✅ README.md que contenha as informações de setup e a descrição do projeto
 
-✅ Live preview do seu desafio em um provedor. (VERCEL)
+✅ Live preview do desafio em um provedor. (VERCEL)
 
 ✅ Não utilização de frameworkk, libs ou qualquer dependência.
 
-✅ Documentação das funções atravéz de comentários no código.
+✅ Documentação das funções através de comentários no código.
 
 ### Funcionalidades não exigidas
 
-✅ Formulário de ajude o algorítmo com campos de input validados de acordo com o conteúdo
+✅ Formulário de "ajude o algorítmo" com campos de input validados de acordo com o conteúdo
+
+✅ Feedback das validações através de tags `span` logo abaixo dos inputs
 
 ✅ Arquivo email.html contendo o design proposto para o email. O enunciado do desafio não deixa claro como a funcionalidade deve ser implantada.
 
