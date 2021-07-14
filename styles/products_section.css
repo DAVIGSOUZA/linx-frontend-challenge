@@ -50,7 +50,7 @@
 
 @media (max-width: 480px) {
   .product-card {
-    margin: 15px auto;
+    margin: 15px 10px;
     flex-direction: row;
     width: 100%;
     max-width: 390px;
@@ -67,5 +67,10 @@
     width: 170px;
     height: 130px;
     overflow: hidden;
+  }
+  .products-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 10px 128px 10px;
   }
 }

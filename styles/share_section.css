@@ -12,7 +12,6 @@
 
 .share-form-wrapper {
   display: flex;
-  flex-wrap: wrap;
   margin-bottom: 30px;
 }
 
@@ -21,11 +20,15 @@
 }
 
 /* --------------------------- MEDIA QUERIES -------------------------------- */
-@media (max-width: 480px) {
+@media (max-width: 800px) {
   #share-section {
     margin-left: 10px;
     margin-right: 10px;
   }
+  .share-form-wrapper {
+    flex-direction: column;
+  }
+
   .share-form-wrapper div {
     margin-left: 0;
   }
