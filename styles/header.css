@@ -22,12 +22,15 @@
 
 #nav {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
-#nav a {
+.nav-container {
+  display: flex;
+}
+
+.nav-container a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,5 +56,15 @@
   #header {
     padding-top: 40px;
     margin-bottom: 110px;
+  }
+  .nav-container a {
+    width: 130px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav-container {
+    flex-direction: column;
   }
 }
