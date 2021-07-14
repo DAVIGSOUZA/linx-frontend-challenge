@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title">
+    <meta property="og:site_name" content="Linx Frontend Challenge">
+    <meta 
+      property="og:description" 
+      content="Desafio Frontend densenvolvido para Linx por Davi Garcia de acordo com o design proposto, utilizando html, css e js puro."
+    >
+    <title>Linx Frontend Challenge</title>
+
+    <link id="favicon" href="./assets/favicon.png" rel="shortcut icon" type="image/png">
+    <link rel="stylesheet" href="./styles/page_config.css"/>
+    <link rel="stylesheet" href="./styles/email.css"/>
+    <link rel="stylesheet" href="./styles/variables.css"/>
+    <link rel="stylesheet" href="./styles/footer.css"/>
+    <link rel="stylesheet" href="./styles/global.css"/>
+    <link rel="stylesheet" href="./styles/header.css"/>
+    <link rel="stylesheet" href="./styles/info_section.css"/>
+    <link rel="stylesheet" href="./styles/products_section.css"/>
+
+    <script src="./js/products.js" defer></script>
+  </head>
+
+  <body>
+    <div class="email-container">
+      <span class="email-bg-header"></span>
+      <header id="email-header">
+        <div class="header-wrapper">
+          <h1 class="color-white text-center">
+            <span class="color-white text-center text-lg">
+              uma seleção de produtos
+            </span> <br>
+            especial para você
+          </h1>
+          <p class="color-white text-center text-md">
+            Todos os produtos desta lista foram selecionados a partir da sua 
+            navegação. Aproveite!
+          </p>
+        </div>
+      </header>
+
+      <main>
+        <section id="email-info-section">
+          <h2 class="text-lg">Olá, Fulano</h2>
+          <p class="text-sm">
+            Fizemos uma lista especial de produtos apenas para você. Isso 
+            mesmo: nesta lista temos só produtos que você pode gostar. Seu 
+            amigo Ciclano lhe recomendou essa lista especial. Olha só:
+          </p>
+        </section>
+
+        <section id="email-products">
+          <div id="email-product-cards-container" class="product-cards-container">
+            <!-- PRODUCT-CARDS INJECTION -->
+          </div>
+
+          <div class="email-products-btn-wrapper">
+            <button class="btn" onclick="location.href = './index.html'">
+              Tem muito mais aqui. Vem ver!
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <footer id="email-footer">
+        <div>
+          <p class="color-white text-center text-sm">
+            Testando suas habilidades em HTML, CSS e JS.
+          </p>
+          <p class="color-white text-center text-sm">Linx impulse</p>
+          <p class="color-white text-center text-sm">2019</p>
+        </div>
+      </footer>
+      <span class="email-bg-footer"></span>
+    </div>
+  </body>
+</html>

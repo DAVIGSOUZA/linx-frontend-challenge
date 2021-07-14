@@ -1,0 +1,69 @@
+/* -------------------------- EMAIL CONFIG ---------------------------------- */
+.email-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+/*  -------------------- BACKGROUND ELEMENTS -------------------------------- */
+.email-bg-header {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 200px;
+  background: var(--bg-color);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+}
+
+.email-bg-footer {
+  position: absolute;
+  z-index: -1;
+  bottom: 0px;
+  right: 0;
+  width: 100%;
+  height: 160px;
+  background: var(--bg-color);
+  clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* ----------------------------- HEADER ------------------------------------- */
+#email-header {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 50px;
+  max-width: 360px;
+}
+
+/* ------------------------- INFO SECTION ----------------------------------- */
+
+#email-info-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 20px;
+  margin-bottom: 50px;
+}
+
+/* ----------------------- PRODUCTS SECTION --------------------------------- */
+#email-products {
+  margin: 0 80px;
+  margin-bottom: 30px;
+}
+
+.email-products-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+/* ----------------------------- FOOTER ------------------------------------- */
+#email-footer {
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+

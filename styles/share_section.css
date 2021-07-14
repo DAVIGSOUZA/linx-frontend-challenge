@@ -1,0 +1,21 @@
+#share-section {
+  padding-bottom: 70px;
+}
+
+#share-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.share-form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.share-form-wrapper div {
+  margin-left: 40px;
+}
