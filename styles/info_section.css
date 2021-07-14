@@ -47,8 +47,8 @@
 
 @media (max-width: 480px) {
   #info-section {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   #info-form {
     margin: 20px auto;

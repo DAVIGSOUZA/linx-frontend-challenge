@@ -19,3 +19,14 @@
 .share-form-wrapper div {
   margin-left: 40px;
 }
+
+/* --------------------------- MEDIA QUERIES -------------------------------- */
+@media (max-width: 480px) {
+  #share-section {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .share-form-wrapper div {
+    margin-left: 0;
+  }
+}
