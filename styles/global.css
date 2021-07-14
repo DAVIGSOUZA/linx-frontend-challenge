@@ -60,7 +60,7 @@
 
 /*  ----------------------------- FORM -------------------------------------- */
 .input-container {
-
+  margin: 0 auto;
 }
 
 .form-label {
@@ -104,7 +104,7 @@
 }
 
 /* --------------------------- MEDIA QUERIES --------------------------------- */
-@media (max-width: 480px) {
+@media (max-width: 320px) {
   .input-text {
     width: 300px;
   }
