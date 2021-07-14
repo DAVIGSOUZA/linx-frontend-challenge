@@ -1,19 +1,19 @@
-// FORMAT A NUMBER TO LOCAL CURRENCY
+// FORMAT NUMBER TO LOCAL CURRENCY
 // 
 // params: 
-//  Number - required
+//  value - number - required - number to format to local currency string
 //
 // returns:
-//  string
+//  type: string
 const toLocalCurrency = (value) => {
   return `R$${value.toFixed(2).replace('.', ',')}`
 }
 
-// RECEIVES AN ARRAY OF PRODUCTS AND RENDER EACH PRODUCT 
+// RECEIVES ARRAY OF PRODUCTS AND RENDER EACH PRODUCT IN THE HTML ID 'product-cards-container' 
 //
 // params: 
-//  array of objects
-//  object schema :
+//  products - array - required - array of objects with the following properties
+//  object properties:
 //    {
 //      name,
 //      image,
@@ -50,13 +50,13 @@ const renderProducts = (products) => {
   document.getElementById('product-cards-container').innerHTML += productCards
 }
 
-// API PAGE VARIABLE
+// VARIABLE
 let apiPage = 1
 
 // FETCH PRODUCTS FROM SPECIFIC PAGE FROM API
 // 
 // params: 
-//  Number - required
+//  page - number - required - indicates page number to api url
 //
 // returns:
 //  Promise<object>
@@ -77,5 +77,5 @@ async function showProducts() {
   apiPage++
 }
 
-// INITICIAL PRODUCT RENDER
+// INITIAL PRODUCT RENDER
 showProducts()
