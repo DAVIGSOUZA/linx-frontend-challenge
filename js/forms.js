@@ -24,7 +24,7 @@ const inputValue = (formName, inputName) => {
 // 
 // params: 
 //  formName - string - required - indicates form to remove success message if necessary
-//  hasError - boolean - required - if input doesn't has error return previus value of hasError variable
+//  hasError - boolean - required - if input value doesn't has error, return previus value of hasError variable
 //  errorMessage - string - required - error message to display in HTML
 //  input - string - required - input id attribute
 //  condition - expression - required - an expression that is considered to be either truthy or falsy
