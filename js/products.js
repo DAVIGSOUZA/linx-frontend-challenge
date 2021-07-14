@@ -26,9 +26,11 @@ const toLocalCurrency = (value) => {
 //      }
 //    }
 //
+//  productsContainerID - string - required - indicates where product cards should render
+//
 // returns:
 //  void
-const renderProducts = (products) => {
+const renderProducts = (products, productsContainerID) => {
   const productCards = products.map(product => `
     <div class="product-card">
       <div class="product-img-wrapper">
@@ -47,7 +49,7 @@ const renderProducts = (products) => {
       </div>
     </div>
   `).join("")
-  document.getElementById('product-cards-container').innerHTML += productCards
+  document.getElementById(productsContainerID).innerHTML += productCards
 }
 
 // VARIABLE
@@ -73,9 +75,23 @@ async function getData(page) {
 //  void
 async function showProducts() {
   let data = await getData(apiPage)
-  renderProducts(data.products)
+  renderProducts(data.products, 'product-cards-container')
   apiPage++
 }
 
-// INITIAL PRODUCT RENDER
-showProducts()
+// GET PRODUCTS FROM API AND RENDER IT
+//
+// returns:
+//  void
+async function showEmailProducts() {
+  let data = await getData(1)
+  renderProducts(data.products.slice(0, 2), 'email-product-cards-container')
+}
+
+// INITIAL PRODUCTS RENDER
+if (/email.html/.test(window.location.href)) {
+  showEmailProducts()
+} else {
+  showProducts()
+}
+
