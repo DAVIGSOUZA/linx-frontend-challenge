@@ -1,5 +1,6 @@
 // VARIABLES
 const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+const cpfRegex = /^[0-9]*$/
 
 const errorMessage = {
   name: 'Preencha um nome válido.',
@@ -52,7 +53,7 @@ const submitInfoForm = () => {
 
   hasErrors = validateInput(formName, hasErrors, errorMessage.name, 'name', !inputValue(formName, 'name'))
   hasErrors = validateInput(formName, hasErrors, errorMessage.email, 'email', !inputValue(formName, 'email') || !emailRegex.test(inputValue(formName, 'email')))
-  hasErrors = validateInput(formName, hasErrors, errorMessage.cpf, 'cpf', !inputValue(formName, 'cpf') || inputValue('info-form', 'cpf').length !== 11 )
+  hasErrors = validateInput(formName, hasErrors, errorMessage.cpf, 'cpf', !inputValue(formName, 'cpf') || inputValue(formName, 'cpf').length !== 11 || !cpfRegex.test(inputValue(formName, 'cpf')))
   hasErrors = validateInput(formName, hasErrors, errorMessage.gender, 'gender', !inputValue(formName, 'gender'))
   
   if (hasErrors) return 
