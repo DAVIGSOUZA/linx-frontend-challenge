@@ -2,7 +2,7 @@
 O desafio consiste no desenvolvimento do layout de uma landing page com uma grade de produtos( [API](https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1) ) e um formulário de newsletter. Seu principal objetivo é transformar este [LAYOUT](https://xd.adobe.com/spec/4025e242-a495-4594-71d2-5fd89d774b57-3614) em uma página funcional.
 
 ## Deploy vercel
-https://linx-frontend-challenge.vercel.app/#products
+https://linx-frontend-challenge.vercel.app/
 
 ### Tecnologias adotadas
 - Projeto desenvolvido em HTML, CSS e JS puro.
